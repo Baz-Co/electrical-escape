@@ -1,0 +1,22 @@
+{
+  "id": -1,
+  "youtube_video_id": "pytube_video.video_id",
+  "user_id": "-1",
+  "username": "channel.initial_data['metadata']['channelMetadataRenderer']['ownerUrls'][0].split()[1]",
+  "title": "pytube_video.title",
+  "url": "pytube_video.watch_url",
+  "local_path": "/",
+  "resolution": "highest_resolution.resolution",
+  "file_name": "highest_resolution.default_filename",
+  "format": "highest_resolution.subtype",
+  "video_codec": "highest_resolution.video_codec",
+  "audio_codec": "highest_resolution.audio_codec",
+  "filesize_bytes": "highest_resolution.filesize",
+  "thumbnail_url": "pytube_video.thumbnail_url",
+  "thumbnail_local_path": "/",
+  "view_count": "pytube_video.views",
+  "like_count": "like_count",
+  "upload_date": "pytube_video.publish_date",
+  "duration_seconds": "pytube_video.length",
+  "description": "pytube_video.descriptio"
+}
