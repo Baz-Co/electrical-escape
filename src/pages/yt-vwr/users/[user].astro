@@ -1,0 +1,27 @@
+---
+import Layout from "../../../layouts/Layout_yt-vwr.astro";
+import UserList from "../../../data/users.json";
+import VideoList from "../../../data/kathodosdotcom.json";
+
+export function getStaticPaths() {
+  return UserList.map((user) => {
+    return {
+      params: {
+        user: user.name,
+      },
+    };
+  });
+}
+
+const { user } = Astro.params;
+---
+
+<Layout title="Users">
+  <h1>{user}</h1>
+  <h2>Videos:</h2>
+  {VideoList.map((video) => (
+    <div class="video">
+        <a href={"/yt-vwr/videos/"+video.key}>{video.key}</a>
+    </div>
+))}
+</Layout>

@@ -1,0 +1,17 @@
+---
+import Layout from '../../../layouts/Layout_yt-vwr.astro';
+import VideoList from "../../../data/kathodosdotcom.json";
+import VideoSearch from "../../../components/VideoSearch.jsx";
+import YTVwr from "../../../components/yt-vwr.jsx";
+---
+
+<Layout title="Videos">
+    <h1>Available Videos:</h1>
+    <VideoSearch client:only="react" data={VideoList} />
+</Layout>
+<div>
+    <YTVwr client:only="react" />
+</div>
+
+<style>
+</style>

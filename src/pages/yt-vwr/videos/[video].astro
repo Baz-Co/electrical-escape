@@ -1,0 +1,22 @@
+---
+import Layout from "../../../layouts/Layout_yt-vwr.astro";
+import VideoPlay from "../../../components/VideoPlayer.jsx";
+
+import VideoList from "../../../data/kathodosdotcom.json";
+export function getStaticPaths() {
+  return VideoList.map((video) => {
+    return {
+      params: {
+        video: video.key,
+      },
+    };
+  });
+}
+
+const { video } = Astro.params;
+---
+
+<Layout title="Videos">
+  <h1>{video}</h1>
+  <VideoPlay client:only="react" user="@kathodosdotcom" vID={video} />
+</Layout>
